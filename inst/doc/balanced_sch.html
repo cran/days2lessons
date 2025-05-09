@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>Orare școlare echilibrate</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Orare școlare echilibrate</h1>
+
+
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(days2lessons)</span></code></pre></div>
+<div id="de-unde-plecăm" class="section level2">
+<h2>De unde plecăm…</h2>
+<p>Pentru anul școlar care ar sta să înceapă, directorul (sau managerul)
+școlii întocmește un <em>plan de încadrare</em>, stabilind între altele
+(în conformitate cu anumite normative legale) ce <em>discipline</em>
+școlare sunt de parcurs la fiecare clasă și care <em>profesori</em>, la
+care <em>clase</em> și pe <em>câte ore</em> de curs, vor face
+<em>lecțiile</em> respective.<br />
+Folosind datele desprinse din planul de încadrare, urmează să se
+formuleze un <em>orar</em> care să indice pe zile și ore ale zilei, la
+care clasă are de intrat fiecare profesor; firește, un profesor nu poate
+intra, într-o zi și oră date, decât la o singură clasă; iar o clasă nu
+poate avea într-o zi și oră date, decât un singur profesor — exceptând
+cazul când, pentru unele discipline, s-a decis despărțirea clasei în
+două <em>grupe</em> de elevi, repartizate fiecare, pentru ziua și ora
+respectivă, la câte un profesor.</p>
+<p>Planul de încadrare este bazat pe bugetul de salarii alocat școlii;
+după volumul acestuia, se stabilește câte “norme didactice” pot fi
+constituite, deci câți profesori pot fi angajați, pentru totalul
+claselor și elevilor. În schimb, orarul școlar are de reflectat nu
+interese, ci anumite “principii pedagogice” specifice activității de
+învățare în care urmează să fie antrenați elevii, cu profesorii
+respectivi; se recomandă ca elevii să aibă zilnic 5, 6, excepțional 7
+ore; profesorii să nu fie încărcați cu mai mult de 6, excepțional 7
+ore/zi; lecțiile pe o aceeași disciplină, la o clasă sau alta, să fie
+distribuite echilibrat de-a lungul săptămânii, de regulă câte una pe zi
+(și nicidecum, înghesuite în două zile).<br />
+Desigur, aceste <em>principii</em> trebuie amintite din start —evitând
+contestări ulterioare, bazate și ele pe diverse “principii”— și chiar cu
+o anumită fermitate din partea angajatorului (“te pot angaja pe 3 ore de
+‘Fizică’, rămase neacoperite la clasa cutare, dar numai dacă accepți să
+le faci câte una pe zi”…); dincolo de principii, pot să fie luate în
+seamă și unele interese personale (dacă nu țin de “nazuri”), dar
+important ar mai fi, pentru un orar acceptabil, ca numărul total de
+<em>ferestre</em> apărute în orar să fie pe cât se poate de mic.</p>
+</div>
+<div id="logica-lucrurilor" class="section level2">
+<h2>Logica lucrurilor</h2>
+<p>Constituirea unui orar echilibrat pleacă de la două sau trei
+observații simple… Din planul de încadrare se deduce pentru fiecare
+profesor și clasă, <em>numărul</em> de ore pe săptămână, pentru lecțiile
+pe disciplina respectivă; numai că în orar trebuie evidențiată (pe câte
+o zi și oră) <em>fiecare</em> dintre lecțiile respective. Prin urmare,
+firesc este ca în loc de câte o singură linie
+<code>Disciplină / Profesor / Clasă / Număr_ore</code>, să înscriem câte
+un număr de <code>Număr_ore</code> linii <em>identice</em> (păstrând pe
+fiecare numai primele trei câmpuri).<br />
+Această lungire a tabelului de încadrare asigură imediat o posibilitate
+foarte simplă pentru a repartiza echilibrat pe zile, lecțiile unei
+clase: pe lista care enumeră pe rând lecțiile fiecărui profesor al
+clasei se adaugă o coloană pe care se repetă de sus în jos (pe cât
+încape) secvența zilelor; astfel, lecțiile fiecărui profesor, fiind pe
+linii consecutive, vor fi alocate în zile diferite (deci în principiu,
+câte una pe zi).</p>
+<p>Apoi, de ce să ne intereseze pe parcursul construcției orarului,
+numele și prenumele? N-are de ce, cu atât mai mult că dacă vom publica
+orarul cu “Nume și Prenume”, putem avea de-a face cu “legea drepturilor
+personale”… Putem <em>abrevia</em> denumirile disciplinelor pe câte două
+litere, desemnând apoi profesorii alipind celor două litere asociate
+disciplinei principale pe care este încadrat fiecare, un număr de ordine
+în lista celor de pe o aceeași disciplină (… “principală”, mascând
+temporar diversele discipline “secundare” care ar fi anexate unora
+dintre profesori — precum “Dirigenție”, sau “Cultură civică”, etc.). De
+exemplu, “<code>Bi1</code>”, “<code>Bi2</code>”, “<code>Bi3</code>” ar
+desemna cei trei profesori de “Biologie”.<br />
+Avantajul acestei convenții prealabile de notație constă în faptul că
+putem omite mai departe, câmpul pe care am nota disciplina
+corespunzătoare fiecărei lecții (ea deducându-se din codul de 3
+caractere al profesorului; desigur, la capăt vom putea avea în vedere și
+disciplinele secundare, dacă le înregistrăm în prealabil într-un tabel,
+pe profesori și clase); pe de altă parte, devine ușor de înregistrat
+<em>cuplajele</em> (și ușor de corelat apoi, la repartizarea lecțiilor,
+cu membrii respectivi): dacă <code>Gr1</code> și <code>Gr2</code> au de
+făcut împreună o lecție “pe grupe” ale unei clase, atunci înființăm
+“profesorul <em>fictiv</em>” <code>Gr1Gr2</code>, atribuidu-i în orar
+clasa respectivă.</p>
+<p>În sfârșit, să observăm că, măcar până a deveni o “problemă” (clasică
+sau altfel), constituirea orarului școlar are de-a face doar cu
+<em>seturi de date</em>; este dat setul (sau tabelul) tuturor lecțiilor
+<code>prof|cls</code> ale săptămânii și acesta trebuie extins cu un câmp
+pe care să figureze ziua și cu unul în care să înscriem ora, pentru
+fiecare lecție (poate fi dat și un mic set suplimentar, cu lecții care
+din diverse motive, trebuie plasate numai în anumite zile). Și se știe
+deja că pentru lucrul eficient cu seturi de date (și nu numai pentru
+treburile statisticii), cel mai potrivit este să folosim limbajul
+<em>R</em> (cu “dialectul” <em>tidyverse</em>)…</p>
+<p>Este normal să nu amestecăm lucrurile: întâi vom repartiza lecțiile
+<em>pe zile</em> (dat fiind că vrem ca repartizarea lecțiilor de-a
+lungul săptămânii să fie pe cât se poate de <em>omogenă</em>, pe zile,
+pe clase și pe profesori) și abia apoi, pentru fiecare zi în parte, vom
+repartiza lecțiile acesteia pe orele <code>1:7</code> ale zilei (ignorăm
+cazul în care școala funcționează cu două schimburi: dacă încadrarea
+profesorilor este judicios concepută, orarul unei asemenea școli revine
+la două orare pe orele <code>1:7</code>, câte unul pentru fiecare
+schimb). Iar în final, după ce vom fi completat corect câmpurile de zi
+și oră, vom ajusta orarul rezultat astfel încât să reducem numărul total
+de ferestre la o valoare acceptabilă.</p>
+<p>În pachetele <em>hours2lessons</em> și <em>refitgaps</em> ne-am
+ocupat deja de repartizarea pe orele <code>1:7</code> a lecțiilor
+dintr-o aceeași zi, respectiv de reducerea ferestrelor din orarul unei
+zile; în pachetul de față vizăm repartizarea echilibrată a lecțiilor
+<code>prof|cls</code> pe zilele săptămânii.</p>
+</div>
+<div id="cum-procedăm" class="section level2">
+<h2>Cum procedăm…</h2>
+<p>Sunt de avut în vedere mai multe categorii de profesori (și de
+lecții). Majoritatea profesorilor au numai <em>ore proprii</em> (fiecare
+intră singur, la una sau alta dintre clasele pe care a fost încadrat);
+fie LS1 subsetul lecțiilor acestora. Unii profesori, pe anumite
+discipline, au ore proprii, dar intră și în <em>cuplaje</em> (în ora
+respectivă, clasa este împărțită ad-hoc în două grupe, care fac lecția
+independent una de alta, cu câte unul dintre membrii cuplajului
+respectiv); fie LS2 subsetul lecțiilor acestora. Pot exista și cuplaje
+<em>externe</em>, în care niciunul dintre membri nu are ore proprii
+(deci nu figurează în LS1); convenim să adăugăm cuplajele externe în
+LS1.</p>
+<p>În sfârșit, pe anumite discipline există lecții la unele clase care
+trebuie să se desfășoare în câte o aceeași zi și oră, împerechind câte
+un profesor cu câte o clasă; le numim lecții “tuplate” și desemnăm prin
+“<em>tuplaj</em>” grupul respectiv de profesori și clase. Ne așteptăm ca
+tuplajele, dacă este cazul, să fie specificate într-un set suplimentar
+de date, să-l notăm LS3.</p>
+<p>LS1, LS2 și LS3 sunt firește, disjuncte între ele. La un moment
+viitor vom lua în considerație și existența unui set de lecții
+<em>prealocate</em> pe zile (pentru cazul celor care, fiind încadrați în
+două școli, nu pot fi prezenți decât în anumite două-trei zile)…</p>
+<p>Cel mai simplu de alocat pe zile sunt lecțiile din LS2 și LS3:
+ordonăm după profesor lecțiile subsetului respectiv și adăugăm o coloană
+pe care repetăm o aceeași permutare de zile; această simplitate ne va
+permite să generăm <em>dinamic</em>, repartițiile respective, după ce
+vom fi obținut o repartiție pe zile pentru lecțiile din subsetul LS1:
+dacă prin cumularea celor trei repartiții, găsim clase pentru care
+numărul de ore/zi este în afara intervalului <code>5:7</code>, sau
+profesori care cumulează mai mult de 7 ore/zi, atunci <em>regenerăm</em>
+repartițiile pe zile pentru LS2 și LS3 (schimbând permutarea de zile
+anterioară)… Putem spera că la un moment dat nimerim o repartizare pe
+zile convenabilă, fiindcă pe de o parte, cuplajele și tuplajele sunt
+relativ puține față de totalul lecțiilor și pe de altă parte… repartiția
+lecțiilor din LS1 este deja omogenă pe clase și cvasi-omogenă pe
+profesorii respectivi.</p>
+<p>Repartizarea pe zile, echilibrată, a lecțiilor din LS1 este mai
+anevoioasă, necesitând de obicei mai multe reluări. Pentru fiecare
+clasă, într-o anumită ordine a acestora, se montează coloana zilelor
+alocate lecţiilor ei: se dispun lecțiile clasei după profesori și se
+caută o permutare de zile a cărei aplicare consecutivă pe lecțiile
+respective asigură că până la momentul curent, distribuțiile pe zile ale
+lecțiilor profesorilor clasei (cumulând cu cele rezultate pentru ei până
+la clasa curentă) sunt cvasi-omogene (cu diferență de cel mult două ore,
+între zile). În caz de succes, se actualizează valorile în vectorul care
+păstrează numărul de ore alocate pe zile fiecărui profesor până la
+momentul curent și se trece la următoarea clasă, până ce se parcurg
+toate clasele. În caz de insucces (când pentru clasa curentă nu găsim
+nicio permutare de zile convenabilă)… stopăm parcurgerea listei
+claselor, re-inițializăm vectorul alocărilor pe zile și o luăm de la
+capăt, dar într-o altă ordine a claselor.<br />
+Normativele existente limitează suficient de mult numărul maxim de ore
+pe profesor și pe clasă, încât este de așteptat ca după un număr mai mic
+sau mai mare de reluări, să nimerim o ordine de parcurgere integrală a
+listei claselor, reușind astfel să montăm pe zile, lecțiile
+fiecăreia.</p>
+</div>
+<div id="un-exemplu-de-lucru" class="section level2">
+<h2>Un exemplu de lucru</h2>
+<p>Am înglobat setul de lecții <code>LSS</code> și setul asociat de
+tuplaje <code>TPL</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">str</span>(LSS)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#&gt; &#39;data.frame&#39;:    870 obs. of  2 variables:</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt;  $ prof: chr  &quot;Bl2&quot; &quot;Mt1&quot; &quot;Gr4&quot; &quot;In2&quot; ...</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#&gt;  $ cls : chr  &quot;5A&quot; &quot;5A&quot; &quot;5A&quot; &quot;5A&quot; ...</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">str</span>(TPL)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co">#&gt; &#39;data.frame&#39;:    27 obs. of  2 variables:</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt;  $ prof: chr  &quot;Gr3 Gr4&quot; &quot;Gr3 Gr1 Gr4&quot; &quot;Gr3 Gr1 Gr4&quot; &quot;Gr3 Gr1 Gr4&quot; ...</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt;  $ cls : chr  &quot;10E 10F&quot; &quot;11A 11B 11D&quot; &quot;11A 11B 11D&quot; &quot;12A 12B 12D&quot; ...</span></span></code></pre></div>
+<p>În <code>LSS</code> sunt înregistrate și câteva cuplaje; de exemplu
+<code>In2In3</code> și <code>In2In1</code> vor afecta numărul de ore/zi
+alocate lecțiilor proprii ale lui <code>In2</code>, <code>In3</code> și
+<code>In1</code>.<br />
+Din <code>TPL</code> deducem de exemplu că lecțiile <code>Gr3 10E</code>
+și <code>Gr4 10F</code> vor trebui să figureze în câte o aceeași zi.</p>
+<p>Următoarea secvență produce într-un anumit timp, câte o repartizare
+echilibrată pe zile, a lecțiilor (și afișează distribuția pe zile a
+numărului total de lecții):</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>prnTime <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">S =</span> <span class="st">&quot;&quot;</span>)  <span class="co"># va afișa timpul curent</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="fu">strftime</span>(<span class="fu">Sys.time</span>(), <span class="at">format=</span><span class="st">&quot;%H:%M:%S&quot;</span>), S)</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) {</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>    <span class="fu">prnTime</span>(<span class="st">&quot; &quot;</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>    R123 <span class="ot">&lt;-</span> <span class="fu">mount_days</span>(LSS, TPL)  <span class="co"># Dfh = 2 (valoarea implicită)</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>    <span class="fu">prnTime</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>    <span class="fu">addmargins</span>(<span class="fu">table</span>(R123[<span class="fu">c</span>(<span class="st">&#39;cls&#39;</span>,<span class="st">&#39;zl&#39;</span>)]))[<span class="st">&quot;Sum&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>] <span class="sc">%&gt;%</span> </span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>        <span class="fu">as.vector</span>() <span class="sc">%&gt;%</span> <span class="fu">print</span>()</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>09:27:24  09:27:40       # durată: sub 20 secunde</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>[1] 186 188 181 188 185</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>09:27:40  09:28:13       # durată: sub 40 secunde</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>[1] 184 187 185 185 187</span></code></pre></div>
+<p>Dintre cele două distribuții rezultate ar fi preferabilă a doua (în
+care diferența între ore/zi este cel mult 3, nu 7 ca în prima).<br />
+Fiindcă am apelat <code>mount_days()</code> cu parametrul implicit
+<code>Dfh = 2</code>, în repartițiile pe zile rezultate fiecare clasă
+are o distribuție cvasi-omogenă a numărului de ore/zi (diferind de la o
+zi la alta cu cel mult 2 ore); desigur, cu <code>Dfh = 3</code> obțineam
+mai rapid o repartiție, dar cu clase la care diferența între zile ajunge
+totuși, la 3 ore…</p>
+<p>Desigur, repartiția pe zile rezultată poate fi “cizelată”
+<em>interactiv</em>, pentru a transforma distribuțiile cvasi-omogene în
+distribuții omogene; dar constituirea unui set de funcții care să
+afișeze distribuțiile pe zile existente la unele clase sau la unii
+profesori și să permită schimbarea zilei alocate unei lecții în scopul
+omogenizării unor distribuții individuale — ar fi probabil sarcina unui
+alt pachet (viitor).</p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
