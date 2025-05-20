@@ -5,9 +5,6 @@
 \alias{LSS}
 \title{Lecții (inclusiv cuplaje) pentru o săptămână de lucru într-o școală.}
 \format{
-set numit 'LSS' de 870 lecții prof|cls (cu 66 profesori, din care 4 cuplaje
-și cu 32 clase). Pe săptămână, profesorii din 'LSS' au între 1 și 28 de
-lecții, iar clasele între 25 și 31 de ore.
 \describe{
 \item{prof}{Cod de 3 sau 6 caractere, reprezentând un profesor,
 respectiv un cuplaj (doi profesori, pe grupe ale unei clase);
@@ -22,6 +19,8 @@ făcut o lecție}
 LSS
 }
 \description{
-Lecții (inclusiv cuplaje) pentru o săptămână de lucru într-o școală.
+Set numit 'LSS' de 870 lecții prof|cls (cu 66 profesori din care 4 cuplaje
+și cu 32 clase). Pe săptămână, profesorii din 'LSS' au între 1 și 28 de
+lecții, iar clasele între 25 și 31 de ore.
 }
 \keyword{datasets}

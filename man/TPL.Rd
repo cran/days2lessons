@@ -3,16 +3,8 @@
 \docType{data}
 \name{TPL}
 \alias{TPL}
-\title{Exemplu de tuplaje; lecțiile dintr-un tuplaj au a se desfășura simultan.
-Atenție: considerăm că niciun profesor "extern" (fără ore proprii, ci
-numai în cuplaje) NU poate face parte din vreun tuplaj.}
+\title{Exemplu de tuplaje; lecțiile dintr-un tuplaj au a se desfășura simultan.}
 \format{
-set numit 'TPL', conținând 27 de tuplaje asociate setului 'LSS'. Un tuplaj
-va angaja într-un același moment (zi și oră), doi (sau trei) profesori
-și două (respectiv, trei) clase (după anumite criterii, elevii reuniți
-ai claselor respective sunt redistribuiți ad-hoc în noi "clase", în
-locul și cu numele celor inițiale). De separat cu câte un spațiu,
-profesorii, respectiv clasele tuplajului.
 \describe{
 \item{prof}{Profesorii care trebuie să intre în același moment, la câte
 una dintre clasele respective}
@@ -24,7 +16,12 @@ o lecție, în câte o aceeași zi (și oră).}
 TPL
 }
 \description{
-Exemplu de tuplaje; lecțiile dintr-un tuplaj au a se desfășura simultan.
+Set numit 'TPL', conținând 27 de tuplaje asociate setului 'LSS'. Un tuplaj
+va angaja într-un același moment (zi și oră), doi (sau trei) profesori
+și două (respectiv, trei) clase (după anumite criterii, elevii reuniți
+ai claselor respective sunt redistribuiți ad-hoc în noi "clase", în
+locul și cu numele celor inițiale).
+De separat cu câte un spațiu, profesorii, respectiv clasele tuplajului.
 Atenție: considerăm că niciun profesor "extern" (fără ore proprii, ci
 numai în cuplaje) NU poate face parte din vreun tuplaj.
 }

@@ -20,7 +20,10 @@ O repartiție pe zile a tuturor lecțiilor, relativ echilibrată.
 Repartizarea pe zile decurge separat: lecțiile celor neimplicați în
 cuplaje (plus dacă există, cuplajele "externe"), respectiv ale cuplajelor
 și membrilor acestora; în final, se adaugă repartizarea lecțiilor din
-tuplaje (dacă există).
+tuplaje (dacă există). Repartiția pe zile a cuplajelor și respectiv,
+a tuplajelor are caracter "dinamic", repetându-se până când îmbinând cele
+trei repartiții, distribuția lecțiilor la fiecare clasă este cât se poate
+de echilibrată (numărul de ore/zi diferă cu cel mult 2 sau 3 ore).
 }
 \examples{
 \donttest{

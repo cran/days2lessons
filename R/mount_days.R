@@ -3,7 +3,10 @@
 #' Repartizarea pe zile decurge separat: lecțiile celor neimplicați în 
 #' cuplaje (plus dacă există, cuplajele "externe"), respectiv ale cuplajelor 
 #' și membrilor acestora; în final, se adaugă repartizarea lecțiilor din
-#' tuplaje (dacă există). 
+#' tuplaje (dacă există). Repartiția pe zile a cuplajelor și respectiv,
+#' a tuplajelor are caracter "dinamic", repetându-se până când îmbinând cele
+#' trei repartiții, distribuția lecțiilor la fiecare clasă este cât se poate
+#' de echilibrată (numărul de ore/zi diferă cu cel mult 2 sau 3 ore).
 #'
 #' @param LSS Setul lecțiilor profesorilor și cuplajelor.
 #' @param TPL Setul tuplajelor.
@@ -20,7 +23,7 @@ mount_days <- function(LSS, TPL = NULL, Dfh = 2) {
     # Profesorul implicat în cuplaje (dacă acestea există) cumulează orele
     # proprii cu cele ale cuplajelor în care este angajat
     Tw1 <- Tw2 <- NULL
-    whw <- who_affects_whom(LSS)
+    whw <- who_affects_whom(LSS)  # funcție internă pachetului
     if(!is.null(whw)) {
         Tw1 <- whw[[1]]; Tw2 <- whw[[2]]
     }
@@ -30,7 +33,7 @@ mount_days <- function(LSS, TPL = NULL, Dfh = 2) {
      
     # 'mount_days_tandem()'
     #     repartizează pe zile lecțiile cuplajelor și membrilor acestora
-    #     (furnizate în parametrul 'LS2')
+    #     (lecții furnizate prin parametrul 'LS2')
     mount_days_tandem <- function(LS2) { 
         if(is.null(Tw1)) return(NULL)
         W <- list()
@@ -56,11 +59,11 @@ mount_days <- function(LSS, TPL = NULL, Dfh = 2) {
 
         map_dfr(names(W), assign_zl_twins) %>%
             mutate(zl = factor(.data$zl, labels = Zile))
-    }  # END mount_days_tandem()
+    }  # END 'mount_days_tandem()'
     
     # 'mount_days_single()'
     #     repartizează pe zile lecțiile profesorilor ne-implicați în cuplaje
-    #     (furnizate în parametrul 'LS1')
+    #     (furnizate prin parametrul 'LS1')
     # Se instituie matricea 'ZH' în care coloanele sunt numite după 
     # profesorii respectivi și vor înregistra pe parcurs (într-o copie a ei,
     # 'Zore'), numărul de ore plasate succesiv profesorilor în fiecare zi. 
@@ -119,8 +122,8 @@ mount_days <- function(LSS, TPL = NULL, Dfh = 2) {
             Zore <- ZH  # (re)iniţializează matricea alocărilor pe zile
             lstCls <- sample(lstCls)  # ordonează aleatoriu clasele
             for(K in lstCls) {  # distribuie pe zile lecţiile fiecărei clase
-                W <- labels_to_class(FRM[[K]])   ##  ; cat("*")
-                if(is.null(W)) {   ##  ; cat("/ ")
+                W <- labels_to_class(FRM[[K]])   ## ; cat("*")
+                if(is.null(W)) {  ##  cat("/ ")
                     sem <- FALSE  # semnalează eșecul alocării la clasa curentă
                     break  # abandonează restul claselor
                 }
@@ -136,7 +139,7 @@ mount_days <- function(LSS, TPL = NULL, Dfh = 2) {
     # Subseturile de lecții, pentru funcțiile interne 'mount_days_single()' și
     # respectiv pentru 'mount_days_tandem()'.
     LS1 <- LSS %>% filter(! .data$prof %in% union(names(Tw1), names(Tw2)))
-    LS2 <- anti_join(LSS, LS1, by=c('prof', 'cls'))
+    LS2 <- anti_join(LSS, LS1, by = c('prof', 'cls'))
     # 'LS1' cuprinde lecțiile celor care nu-s membri în vreun cuplaj,
     # plus eventual, cuplajele "externe" (ai căror membri nu au ore proprii).
     # 'LS2' cuprinde lecțiile cuplajelor și membrilor cu ore proprii.
@@ -151,7 +154,7 @@ mount_days <- function(LSS, TPL = NULL, Dfh = 2) {
     # va trebui să se ajusteze interactiv repartiția rezultată, pentru a evita
     # totuși, distribuții neomogene apărute la unele clase.
     while(TRUE) {
-        R2 <- mount_days_tandem(LS2)
+        R2 <- mount_days_tandem(LS2) 
         R3 <- explain_tpl(TPL)
         R123 <- rbind(R1, R2, R3)
         dfh <- apply(table(R123[c('cls', 'zl')]), 1, function(w) 

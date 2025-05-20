@@ -25,12 +25,12 @@ who_affects_whom <- function(Lss) {
     sgp <- Prof[nchar(Prof) == 3]
     if(length(sgp) == length(Prof)) 
         return(NULL)  # nu există cuplaje (deci nici cumul de ore/zi)
-    # de la cine cumulează ore, cel care este angajat în cuplaje
+    # De la cine cumulează ore, cel care este angajat în cuplaje
     Tw1 <- map(sgp, function(P) {
         gp <- Prof[which(grepl(P, Prof))]
         if(length(gp) > 1) setdiff(gp, P)
     }) %>% setNames(sgp) %>% purrr::compact()
-    # invers: pe cine influențează cu ore, cuplajele
+    # Invers: pe cine influențează cu ore, cuplajele
     cup <- Prof[nchar(Prof) == 6]
     Tw2 <- lapply(cup, function(PP) {
         p12 <- vector("character")
